@@ -1,0 +1,20 @@
+IPHONEOS_DEPLOYMENT_TARGET = 10
+SDKROOT = iphoneos
+SUPPORTED_PLATFORMS = iphonesimulator iphoneos
+
+ARCHS = $(ARCHS_STANDARD)
+TARGETED_DEVICE_FAMILY = 1, 2
+VALID_ARCHS = $(ARCHS_STANDARD)
+VALIDATE_PRODUCT = YES
+
+FRAMEWORK_LDPATH = /Library/Frameworks/@@PROJECTNAME@@Substrate.framework/Frameworks
+LIBRARY_LDPATH = /Library/Frameworks/@@PROJECTNAME@@Substrate.framework/Libraries
+SWIFT_LDPATH = /usr/lib/libswift/stable
+THEOS_PATH = /opt/theos
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(THEOS_PATH)/lib
+HEADER_SEARCH_PATHS = $(inherited) $(THEOS_PATH)/include
+LD_RUNPATH_SEARCH_PATHS = $(inherited) $(THEOS_PATH)/lib $(SWIFT_LDPATH) $(FRAMEWORK_LDPATH) $(LIBRARY_LDPATH)
+LIBRARY_SEARCH_PATHS = $(inherited) $(THEOS_PATH)/lib
+
+SWIFT_VERSION = 5

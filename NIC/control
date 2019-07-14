@@ -1,0 +1,4 @@
+name "substrate"
+prompt FILTER "MobileSubstrate Bundle Filter" "com.apple.springboard"
+constrain file "Substrate/control" to package
+constrain "Substrate/theos" to link_theos
